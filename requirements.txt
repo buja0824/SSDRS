@@ -1,0 +1,12 @@
+streamlit
+python-dotenv
+langchain
+openai
+langchain-community
+unstructured
+tiktoken
+unstructured[pdf]
+python-magic-bin
+onnx==1.16.1
+anthropic
+langchain[anthropic]
