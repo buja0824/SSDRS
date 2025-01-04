@@ -6,7 +6,7 @@ langchain-community
 unstructured
 tiktoken
 unstructured[pdf]
-python-magic-bin
+python-magic==0.4.27
 onnx==1.16.1
 anthropic
 langchain[anthropic]
