@@ -19,6 +19,9 @@ from langchain.chat_models import ChatOpenAI
 from langchain.callbacks.base import BaseCallbackHandler
 import streamlit as st
 
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 # === Callback Handler definition ===
 class ChatCallbackHandler(BaseCallbackHandler):
     message = ""
@@ -36,6 +39,7 @@ class ChatCallbackHandler(BaseCallbackHandler):
 
 llm = ChatOpenAI(
     model_name="gpt-4o",
+    openai_api_key = OPENAI_API_KEY,
     temperature=0.1,
     streaming=True,
     callbacks=[ChatCallbackHandler()],
